@@ -1,5 +1,9 @@
+import { MOVIES } from "../table-names";
+
 export const selectActorByName = (fullName: string): string => {
-  throw new Error(`todo`);
+  return(
+  'SELECT cast FROM MOVIES'
+  );
 };
 
 export const selectKeyword = (keyword: string): string => {

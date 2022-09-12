@@ -30,7 +30,10 @@ const insertActors = (actors: string[]) => {
 };
 
 const insertKeywords = (keywords: string[]) => {
-  throw new Error(`todo`);
+  return (
+  'INSERT INTO KEYWORDS (keywords) VALUES' +
+  keywords.map(x => escape(x)).join(",")
+  );
 };
 
 const insertDirectors = (directors: string[]) => {
