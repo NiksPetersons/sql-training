@@ -83,7 +83,7 @@ const insertMovies = (movies: Movie[]) => {
         '${movie.revenueAdjusted}',
         '${escape(movie.originalTitle)}',
         '${escape(movie.homepage)}',
-        '${movie.tagline == undefined ? 0 : `${escape(movie.tagline)}`}',
+        '${movie.tagline ? `${escape(movie.tagline)}` : undefined }',
         '${escape(movie.overview)}',
         '${movie.runtime}',
         '${escape(movie.releaseDate)}'

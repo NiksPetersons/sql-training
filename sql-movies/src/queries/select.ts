@@ -2,7 +2,7 @@ import { MOVIES } from "../table-names";
 
 export const selectActorByName = (fullName: string): string => {
   return(
-  `SELECT full_name FROM ACTORS WHERE full_name = '${fullName}'`
+  `SELECT * FROM ACTORS WHERE full_name = '${fullName}'`
   )
 };
 
@@ -26,7 +26,7 @@ export const selectGenre = (genre: string): string => {
 
 export const selectProductionCompany = (company: string): string => {
   return(
-    `SELECT company_name FROM PRODUCTION_COMPANIES WHERE company_name = '${company}'`
+    `SELECT * FROM PRODUCTION_COMPANIES WHERE company_name = '${company}'`
     )
 };
 
@@ -74,13 +74,13 @@ export const selectMovie = (imdbId: string): string => {
 
 export const selectMovieId = (imdbId: string): string => {
   return(
-    `SELECT imdb_id FROM MOVIES WHERE imdb_id = '${imdbId}'`
+    `SELECT id FROM MOVIES WHERE imdb_id = '${imdbId}'`
   )
 };
 
 export const selectRatingsByUserID = (userId: number): string => {
   return(
-    `SELECT * FROM RATINGS WHERE userId = '${userId}'`
+    `SELECT * FROM MOVIE_RATINGS WHERE user_id = '${userId}'`
   )
 };
 
