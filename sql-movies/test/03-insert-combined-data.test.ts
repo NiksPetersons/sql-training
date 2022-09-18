@@ -20,9 +20,9 @@ const insertRatings = (movieId: number, ratings: Rating[]) => {
       ) VALUES`+
     ratings.map(rating =>
       `(
-        '${rating.userId}',
-        '${movieId}',
-        '${rating.rating}',
+        ${rating.userId},
+        ${movieId},
+        ${rating.rating},
         '${rating.time_created}'
       )`
     )

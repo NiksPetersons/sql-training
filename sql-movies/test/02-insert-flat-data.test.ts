@@ -76,16 +76,16 @@ const insertMovies = (movies: Movie[]) => {
     movies.map(movie =>
       `(
         '${escape(movie.imdbId)}',
-        '${movie.popularity}',
-        '${movie.budget}',
-        '${movie.budgetAdjusted}',
-        '${movie.revenue}',
-        '${movie.revenueAdjusted}',
+        ${movie.popularity},
+        ${movie.budget},
+        ${movie.budgetAdjusted},
+        ${movie.revenue},
+        ${movie.revenueAdjusted},
         '${escape(movie.originalTitle)}',
         '${escape(movie.homepage)}',
         '${movie.tagline ? `${escape(movie.tagline)}` : undefined }',
         '${escape(movie.overview)}',
-        '${movie.runtime}',
+        ${movie.runtime},
         '${escape(movie.releaseDate)}'
       )`
     )
